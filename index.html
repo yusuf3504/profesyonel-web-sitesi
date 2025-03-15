@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>profosyenel web sitesi</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="" class="logo">
+            <img src="https://w7.pngwing.com/pngs/754/944/png-transparent-dining-room-drawing-tapet-design-food-recipe-logo.png"
+                alt="">
+        </a>
+        <nav class="navbar">
+            <a href="index.html" class="active">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="blog.html">Blog</a>
+            <a href="contac.html">İletişim</a>
+            <a href="tarifi.html">Yemek Tarifi</a>
+
+        </nav>
+        <div class="buttons">
+            <button id="search-btn">
+                <i class="bi bi-search"></i>
+            </button>
+            <button id="cart-icon" class="cart-icon" onclick="toggleCart()">
+                <i class="bi bi-cart3"></i>
+            </button>
+            <button id="menu-btn">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+        <div class="search-form">
+            <input type="text" class="search-input" id="search-box" placeholder="search">
+            <i class="bi bi-search"></i>
+        </div>
+
+        <div id="notification" class="notification"><i class="bi bi-check2"></i>Ürün sepete eklendi!</div>
+        <div id="cart" class="cart">
+            <button id="close-cart" class="close-cart" onclick="toggleCart()">✖</button>
+            <h2>Sepetiniz</h2>
+            <ul id="cart-items"></ul>
+            <p id="total-price">Toplam: 0 TL</p>
+            <button class="btn-als">Alışverişi Tamamla</button>
+        </div>
+    </header>
+    <section class="home">
+        <div class="content">
+            <h3>Yiycek dünyası</h3>
+            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores distinctio at ad odio</P>
+            <a href="" class="btn">Order Now</a>
+        </div>
+    </section>
+    <!-- menu section start -->
+    <section class="menu" id="menu">
+        <h1 class="heading">en çok <span>satanlar</span></h1>
+
+        <div class="box-container">
+            <div class="box">
+                <div class="box-head">
+                    <img src="public/hamburger.jpeg" alt="">
+                    <div class="box-minhead">
+                        <span class="menu-category">Burger</span>
+                        <h3>Tam Porsiyon</h3>
+                        <div class="price">104.99TL <span>125TL</span></div>
+                    </div>
+                </div>
+                <div class="box-bottom">
+                    <a class="btn1" onclick="addToCart('Pizza', 104.99)">Sepete Ekle</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-head">
+                    <img src="public/şişkebab.png" alt="">
+                    <div class="box-minhead">
+                        <span class="menu-category">Şiş Kebab</span>
+                        <h3>6 Şiş Kebab</h3>
+                        <div class="price">135.99TL <span>165TL</span></div>
+                    </div>
+                </div>
+                <div class="box-bottom">
+                    <a class="btn1" onclick="addToCart('Şiş Kebab', 135.99)">Sepete Ekle</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-head">
+                    <img src="public/dürüm.jpg" alt="">
+                    <div class="box-minhead">
+                        <span class="menu-category">Dürüm</span>
+                        <h3>Fix Dürüm</h3>
+                        <div class="price">54.99Tl <span>65Tl</span></div>
+                    </div>
+                </div>
+                <div class="box-bottom">
+                    <a class="btn1" onclick="addToCart('Dürüm', 54.99)">Sepete Ekle</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-head">
+                    <img src="public/pizza.png" alt="">
+                    <div class="box-minhead">
+                        <span class="menu-category">Pizza</span>
+                        <h3>Suçuklu pizza</h3>
+                        <div class="price">94TL <span>115TL</span></div>
+                    </div>
+                </div>
+                <div class="box-bottom">
+                    <a class="btn1" onclick="addToCart('Suçuklu pizza', 94)">Sepete Ekle</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- menu section end -->
+    <!-- about start -->
+    <section class="about">
+        <h1 class="heading">nasıl <span>yapılır?</span></h1>
+        <div class="row">
+            <div class="image">
+                <img src="public/home.png" alt="">
+            </div>
+            <div class="content">
+                <h3>Burger</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente laudantium quas harum quis
+                    provident. Harum nemo possimus similique in porro dolorum molestiae quidem, numquam rerum eos
+                    debitis natus iste laborum!</p>
+                <a href="" class="btn">daha fazla</a>
+            </div>
+        </div>
+    </section>
+    <!-- about end -->
+    <!-- rewiew start -->
+    <section class="review">
+        <h1 class="heading">Müşteri <span>Yorumları</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="public/quote.png" alt="alıntı">
+                <p>Lorem ipsum dolor sit amet
+                    quod praesentium cupiditate, corporis officia sequi, veritatis quaerat tempora deserunt officiis
+                    quisquam fugit ad?</p>
+                <img src="public/erkekprofil.png" alt="" class="user">
+                <h3>Tolga Y*****</h3>
+                <div class="stars">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+
+                </div>
+            </div>
+            <div class="box">
+                <img src="public/quote.png" alt="alıntı">
+                <p>Lorem ipsum dolor sit amet
+                    quod praesentium cupiditate, corporis officia sequi, veritatis quaerat tempora deserunt officiis
+                    quisquam fugit ad?</p>
+                <img src="public/erkekprofil.png" alt="" class="user">
+                <h3>ali D****</h3>
+                <div class="stars">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="public/quote.png" alt="alıntı">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt molestias, velit suscipit maiores
+                    quod praesentium cupiditate, corporis officia sequi
+                </p>
+                <img src="public/kadınprofil.png" alt="" class="user">
+                <h3>Öykü D****</h3>
+                <div class="stars">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="public/quote.png" alt="alıntı">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt molestias, velit suscipit maiores
+                    quod praesentium veritatis quaerat tempora </p>
+                <img src="public/erkekprofil.png" alt="" class="user">
+                <h3>Okan B****</h3>
+                <div class="stars">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- rewiew end -->
+
+    <div class="footerMenus">
+        <div class="shpadding-reset"><a href="/kahve-c-1798" class="">
+                <span class="üstbaslık">Zincir Restoranlar</span></a>
+            <ul class="footerMenu footerMenu-1 hidden-md-down">
+                <li><a href="/turk-kahvesi-c-3400" class="">İstanbull</a></li>
+                <li><a href="/kapsul-kahveler-c-3486" class="">Ankara</a></li>
+                <li><a href="/filtre-kahve-c-3401" class="">İzmir</a></li>
+                <li><a href="/yoresel-kahve-c-3402" class="">Antalya</a></li>
+                <li><a href="/espresso-c-3403" class="">Trabzon</a></li>
+            </ul>
+        </div>
+        <div class="shpadding-reset1"><a href="/aksesuar-c-1802" class=""><span class="üstbaslık">YEMEKLER</span></a>
+            <ul class="footerMenu footerMenu-1 hidden-md-down">
+                <li><a href="/kutu-cikolata-c-3408" class="">Lahmacun</a></li>
+                <li><a href="/atistirmalik-cikolata-c-3409" class="">Dürüm</a></li>
+                <li><a href="/fit-lezzetler-c-3480" class="">Pizza</a></li>
+                <li><a href="/sss/urun-gami-s-27" class="" rel="nofollow">Kebab</a></li>
+            </ul>
+        </div>
+        <div class="shpadding-reset1"><a href="/aksesuar-c-1802" class=""><span class="üstbaslık">Bize katılın
+                </span></a>
+            <ul class="footerMenu footerMenu-1 hidden-md-down">
+                <li><a href="/kutu-cikolata-c-3408" class="">Bayimiz olun</a></li>
+                <li><a href="/atistirmalik-cikolata-c-3409" class="">Deponu Kirala</a></li>
+            </ul>
+        </div>
+        <div class="shpadding-reset1"><a href="/kesfet/hakkimizda" class="">
+            <span class="üstbaslık">HAKKIMIZDA</span></a>
+            <ul class="footerMenu footerMenu-5 hidden-md-down">
+                <li><a href="/kesfet/hakkimizda" class="" rel="nofollow"> Hikayemiz</a></li>
+                <li><a href="/kesfet/uretim" class="" rel="nofollow"> Üretim</a></li>
+                <li><a href="/kesfet/kurumsal-cozumler" class="" rel="nofollow">Kurumsal Çözümler</a></li>
+                <li><a href="/kesfet/kariyer" class="" rel="nofollow">Kariyer</a></li>
+                <li><a href="/blog" class="">Blog</a></li>
+                <li><a href="/kesfet/hakkimizda#degerlerimiz" class="" rel="nofollow">Değerlerimiz</a></li>
+            </ul>
+        </div>
+        <div class="shpadding-reset1"><a href="/sss" class=""><span class="üstbaslık">YARDIM</span></a>
+            <ul class="footerMenu footerMenu-5 hidden-md-down">
+                <li><a href="/sss/uyelik-s-26" class="" rel="nofollow">Üyelik</a></li>
+                <li><a href="/sss/siparis-islemleri-s-23" class="" rel="nofollow">Sipariş İşlemleri</a></li>
+                <li><a href="/sss/odeme-islemleri-s-21" class="" rel="nofollow">Ödeme İşlemleri</a></li>
+                <li><a href="/sss/teslimat-sureci-s-25" class="" rel="nofollow">Teslimat Süreci</a></li>
+                <li><a href="/sss/iletisim-s-31" class="" rel="nofollow">İletişim</a></li>
+                <li><a href="/sss/iletisim" class="">İletişim Formu</a></li>
+                <li><a href="https://e-sirket.mkk.com.tr/esir"></a>Bilgi Toplumu Hizmetleri</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="menu-share">
+        <div class="share">
+            <p>İletişim İçin:</p>
+            <a href="https://www.facebook.com"><i class="bi bi-facebook"></i></a>
+            <a href="https://twitter.com"><i class="bi bi-twitter"></i></a>
+            <a href="https://www.instagram.com"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.whatsapp.com"><i class="bi bi-whatsapp"></i></a>
+        </div>
+
+        <div class="credit">
+            created by <span>Yusuf Yaşar</span> | all rights reserved
+        </div>
+    </div>
+
+    <!-- footer end -->
+    <script src="script.js"></script>
+</body>
+
+</html>

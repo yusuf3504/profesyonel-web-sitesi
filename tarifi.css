@@ -1,0 +1,97 @@
+.tarifi .box-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.tarifi .box-container .box {
+    border: 1px solid black;
+}
+
+.tarifi .box-container .box .image {
+    height: 400px;
+    overflow: hidden;
+    width: 100%;
+   
+}
+
+.tarifi .box-container .box .image img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.tarifi .box-container .box:hover img {
+    transform: scale(1.2);
+}
+
+.tarifi .box-container .box .content {
+    padding: 20px;
+}
+
+.tarifi .box-container .box .content .title {
+    line-height: 1.2;
+    font-size: 25px;
+}
+
+.tarifi .box-container .box .content span {
+    display: block;
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+.tarifi .box-container .box .content p {
+    margin-top: 8px;
+    font-size: 15px;
+    line-height: 1.8;
+}
+.tarifi .box-container .box .btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 1.75rem;
+    border-radius: 30rem;
+    font-size: 1rem;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    bottom: 8px;
+}
+.accordion {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.accordion-header {
+    background: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 0px;
+    border: none;
+    font-size: 1.2rem;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    color: #0056b3;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #f9f9f9;
+    padding: 0 20px;
+}
+
+.accordion-content p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.active + .accordion-content {
+    max-height: 200px; 
+    padding: 10px 20px;
+}
